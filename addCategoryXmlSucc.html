@@ -1,0 +1,14 @@
+<html>
+   <body>
+        <div><h3><i> You have created a new category!</i></h3></div>
+        <div><h4> Category name:</h4> {{category}} </div>
+        <div> <h4>Items:</h4> </div>
+	{% for item in allItems %}
+	<div>&nbsp;&nbsp;&nbsp;&nbsp;{{item}}</div>
+	{% endfor %}
+	<br>
+	<div>Go back to the <a href="/">welcome page</a><div>
+
+   </body>
+</html>
+

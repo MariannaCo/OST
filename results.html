@@ -1,0 +1,16 @@
+
+<html>
+   <body>
+        <h3><i>Results of category {{category}}</i></h3>
+        <table border="1">
+	{% for item in allItems %}
+        <tr>
+            <td> {{item.name}} </td>
+            <td> {{item.wins}} </td>
+        </tr>
+	{% endfor %}
+        </table>
+        <br>
+ 	<div>Go back to the <a href="/">welcome page</a><div>
+   </body>
+</html>

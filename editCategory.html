@@ -1,0 +1,24 @@
+<html>
+
+   <body>
+	<div><h3><i>Please choose a category</i></h3><div>
+	<form action="/edit" method="post">
+		{% for category in userCategories %}
+			<div><input type="radio" name="category" value="{{category.name}}" checked>{{category.name}}</div>
+		{% endfor %}
+
+		<br>	
+		<div><h3><i>What do you want to do with the category?</i></h3><div>
+		<div><input type="radio" name="action" value="Change name" checked>Change name of category</div>
+		<div><input type="radio" name="action" value="Delete">Delete category</div>
+		<div><input type="radio" name="action" value="Edit Items">Edit items</div>
+		
+		<br>
+		<input type=submit name=click value="Edit"><br/>
+	</form>
+	<br>
+	<div>Go back to the <a href="/">welcome page</a><div>
+	
+   </body>
+</html>
+	

@@ -1,0 +1,35 @@
+
+<html>
+   <head>
+	<script language="Javascript">
+		function submit_form(){
+		    document.forms["form1"].submit();
+		}
+	</script>
+   </head>
+
+   <body>
+	<h3><i> You chose {{winner}} over {{otherItem}}</i></h3>
+	<table border="1">
+	<tr>
+	    <td> {{winner}} </td>
+	    <td> {{winnerWins}} </td>
+	</tr>
+	<tr>
+	     <td> {{otherItem}} </td>
+	     <td> {{otherWins}} </td>
+	</tr>
+	</table>
+	<br>
+        </form>
+	<br>
+	<br>
+	<form id="form1" method=post action=/results>
+		<div><input type="hidden" name="category" value="{{category}}"/></div>
+		<div><input type="hidden" name="category_user" value="{{category_user}}"/></div>
+		<div> See <a href="JavaScript:submit_form()">all results</a></div>
+	</form>
+	<div> Return to the <a href="/">welcome page</a><div>
+    </body>
+</html>
+

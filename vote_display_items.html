@@ -1,0 +1,36 @@
+<html>
+   <head>
+        <script language="Javascript">
+                function submit_form(){
+                    document.forms["form1"].submit();
+                }
+        </script>
+   </head>
+
+   <body>
+        <div><h3> Vote for an item </h3></div>
+	<form action="/voted" method="post">
+		<div><input type="hidden" name="item1" value="{{item1}}"/></div>
+		<div><input type="hidden" name="item2" value="{{item2}}"/></div>
+		<div><input type="hidden" name="category" value="{{category}}"/></div>
+		<div><input type="hidden" name="category_user" value="{{category_user}}"/></div>
+                <div><input type="radio" name="item" value="{{item1}}"checked>{{item1}}</div>
+		<div><input type="radio" name="item" value="{{item2}}">{{item2}}</div>
+                <br> 
+		<input type=submit name="click" value="Vote">
+        </form>
+        <form action="/items" method="post">
+        	<div><input type="hidden" name="category" value="{{category}}"></div>
+        	<div><input type="hidden" name="category_user" value="{{category_user}}"/></div>
+        	<div><input type="hidden" name="item1" value="{{item1}}"></div>
+        	<div><input type="hidden" name="item2" value="{{item2}}"></div>
+        	<input type=submit name="click" value="Skip">
+        </form>
+	<form action="/chooseAction" method="post">
+ 		<div><input type="hidden" name="action" value="Vote"></div>
+		<div> Go back to <a href="JavaScript:submit_form()">categories</a></div>
+	</form>
+	<div>Go back to the <a href="/">welcome page</a><div>
+   </body>
+</html>
+

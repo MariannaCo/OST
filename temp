@@ -1,0 +1,4 @@
+	item = Item(key_name=name, parent=cat)
+		item.name=name
+		item.wins=0
+		item.put()

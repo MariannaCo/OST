@@ -1,0 +1,26 @@
+<html>
+<head>
+	<script type="text/javascript">
+    	function isXml(input)
+    	{
+        	var value = input.value;
+        	var res = value.substr(value.lastIndexOf('.')) == '.xml';
+            	if (!res) {
+                	input.value = "";
+            	}
+        	return res;
+    	 }
+	</script>
+</head>
+ <body>
+        <div><H3><i>Upload an XML file </i></H3><div>
+        <form enctype="multipart/form-data" action="/uploadFile" method="post">
+         	<input type="file" name="datafile" size="35" onchange="return isXml(this)"/>
+		<br>
+		<br>
+                <input type=submit value="Submit">
+        </form>
+ </body>
+</html>
+
+

@@ -1,0 +1,16 @@
+<html>
+   <body>
+        <div><h3><i>Enter a new item for category {{category}}</h3></i></div>
+               <form action="/addMoreItems" method="post">
+                    <input type="text" name="item"><br>
+		    <div><h4>Do you want to add more items than the one you just entered?</h4></div><br>
+		    <input type="hidden" name="addPage" value="1">
+		    <input type="hidden" name="category" value="{{category}}">	
+                    <input type="submit" name="click" value="Yes">
+                    <input type="submit" name="click" value="No thanks">
+                </form>
+   </body>
+</html>
+
+
+

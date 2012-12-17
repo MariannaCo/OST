@@ -1,0 +1,11 @@
+<html>
+   <body>
+	<div><h3><i>Enter the name of the new item for category {{category}}</h3></i></div>
+		<form action="/createItem" method="post">
+			<input type="hidden" name="category" value="{{category}}"/>	
+			<input type="text" name="item">
+			<input type=submit value="Create item">
+		</form>
+   </body>
+</html>
+

@@ -1,0 +1,14 @@
+<html>
+   <body>
+	<div><h3><i>Enter the new name of the item</i></h3></div>
+		<form action="/changeItemName" method="post">
+			<input type="hidden" name="oldItem" value="{{item}}"/>	
+			<input type="hidden" name="category" value="{{category}}"/>	
+			<input type="text" name="item"><br><br>
+			<input type=submit value="Change name">
+		</form>
+	<br>
+	<div>Go back to the <a href="/">welcome page</a><div>
+   </body>
+</html>
+

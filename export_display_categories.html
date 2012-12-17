@@ -1,0 +1,15 @@
+<html>
+   <body>
+        <div><h3><i>Please choose which category you want to export</i></h3><div>
+        <form action="/export" method="post">
+                {% for category in allCategories %}
+                	<input type="hidden" name="{{category.name}}" value="{{category.user}}">
+                        <div><input type="radio" name="category" value="{{category.name}}" checked>{{category.name}}</div>
+                {% endfor %}
+                <br>
+                <input type=submit  value="Export">
+        </form>
+        <div>Go back to the <a href="/">welcome page</a><div>
+   </body>
+</html>
+
